@@ -1,5 +1,5 @@
 const std = @import("std");
-const cl = @import("clay-zig");
+const cl = @import("clay_zig");
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
@@ -15,7 +15,7 @@ pub fn build(b: *std.Build) void {
     b.installArtifact(exe);
 
     { // Dependencies
-        const raylib_dep = b.dependency("raylib-zig", .{
+        const raylib_dep = b.dependency("raylib_zig", .{
             .target = target,
             .optimize = optimize,
             .shared = true,
@@ -23,7 +23,7 @@ pub fn build(b: *std.Build) void {
         exe.root_module.addImport("raylib", raylib_dep.module("raylib"));
         exe.linkLibrary(raylib_dep.artifact("raylib"));
 
-        const clay_dep = b.dependency("clay-zig", .{
+        const clay_dep = b.dependency("clay_zig", .{
             .target = target,
             .optimize = optimize,
         });

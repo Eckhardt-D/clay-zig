@@ -1,12 +1,13 @@
 .{
-    .name = "raylib-video-demo",
+    .name = .raylib_video_demo,
     .version = "0.0.0",
+    .fingerprint = 0xac5e81113fe932d0,
     .dependencies = .{
-        .@"raylib-zig" = .{
+        .raylib_zig = .{
             .url = "https://github.com/Not-Nik/raylib-zig/archive/devel.tar.gz",
-            .hash = "122058d3ea6318efb819d0bffba630afd1a459fa3a99b4bfe4b680a937d5de04d2fc",
+            .hash = "raylib_zig-5.6.0-dev-KE8REBMyBQCnQ9RBhHsoSKr97XmDHF84wx3g0UiMRDxj",
         },
-        .@"clay-zig" = .{
+        .clay_zig = .{
             .path = "../../",
         },
     },
